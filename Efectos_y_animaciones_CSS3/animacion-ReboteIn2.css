@@ -1,0 +1,32 @@
+/*caracteristicas del div que seran por defecto*/
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	margin: 15px 0px;
+	position: relative;
+
+	margin-left: 20px;
+	padding: 5px 20px;
+	text-align: center;
+	font-weight: bolder;
+	width: 80px;
+	display: inline-block;*/
+	vertical-align: middle;
+}
+.ReboteIn2{
+	-webkit-animation:1s ReboteIn2 1;
+}
+@-webkit-keyframes ReboteIn2{
+	0%{
+		opacity: 0;
+		-webkit-transform:translateX(-2000px);
+	}
+	50%{
+		opacity: 1;
+		-webkit-transform:translateX(30px);
+	}
+	70%{
+		opacity: 1;
+		-webkit-transform:translateX(-10px);
+	}
+}

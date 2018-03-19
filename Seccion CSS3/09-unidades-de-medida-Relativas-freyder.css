@@ -1,0 +1,25 @@
+body{
+	/*establecemos el tamaño de la fuente
+	de todo el body*/
+	font-size: 16px;
+}
+p.em{
+	font-size: 2em;/*el em lo que hace
+	es relativizar respecto a lo que hereda
+	y asigna la proporsion que se le haya
+	dado, para el caso: p.em es heredado
+	de body, entonces body tiene 16px
+	cuando se le pone 2em pasa hacer 32px*/
+}
+div p{
+	font-size: 2em;
+}
+div p.rem{/**/
+	font-size: 3rem;/*el rem lo que hace
+	es hacer la reescala sin herencia 
+	ninguna, calcula en funcion al root
+	osea al body*/
+}
+p.ex{
+	font-size: 2.5ex;
+}

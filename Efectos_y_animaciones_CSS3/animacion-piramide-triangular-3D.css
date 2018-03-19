@@ -1,0 +1,101 @@
+#piramide{
+	position: relative;/*relative porque es el padre y luego tenemos 
+	que acomodar todo el resto de caras a el*/
+	margin: 80px auto;
+	height: 500px;
+	width: 100px;
+	transform-style: preserve-3d;
+	transform-origin: 116px 200px 116px; /*estos datos son ya
+	calculados para que quede todo bien centrado*/
+	transform: rotateY(30deg);/*para que rote 30° y podamos ver
+	todas las caras*/
+	animation: giro 10s infinite linear;
+}
+#piramide>div{
+	position: absolute;/*por eso el padre tiene que ser relative*/
+	/*por lo general el HTML trabaja con cajas(div) rectangulares que
+	tienen su altura y anchura, para diseñar caras triangulares 
+	no es un background, se debe trabajar es con los bordes para darles
+	diferentes tamaños para que los bordes choquen unos con otros y
+	se presente el triangulo
+	*/
+	border-style: solid;/*borde solido*/
+	border-width: 200px 0px 200px 346px;/*anchura del borde,200px
+	arriba, 0px a un lado,200px abajo, 346px al otro lado  */
+	transform-origin: 0 0;/*0 0 en cada lado*/
+}
+#piramide>div:nth-child(1){/*la primera de las caras hijas del 
+	div(piramide)*/
+	border-color: transparent /*transparencia borde arriba*/
+				  transparent/*transparencia borde abajo*/
+				  transparent /*transparencia borde derecha */
+				  rgba(0,0,0, 0.8);/*borde izquierdo: negro con
+				  transparencia la parte de atras, se le da este
+				  valor a la izquierda porq la cara va apuntar a
+				  la derecha, que es donde el border-with es de 0px*/
+	-webkit-transform: rotateX(-60deg)
+			   			rotateY(19.5deg)
+			   			translateX(-116px)
+			  			translateY(-200px)
+			   			translateZ(326px);
+
+}
+#piramide>div:nth-child(2){/*la primera de las caras hijas del 
+	div(piramide)*/
+	border-color: transparent /*transparencia borde arriba*/
+				  transparent/*transparencia borde abajo*/
+				  transparent /*transparencia borde derecha */
+				  rgba(255,0,0, 0.8);/*borde izquierdo: rojo con
+				  transparencia (parte de atras), se le da este
+				  valor a la izquierda porq la cara va apuntar a
+				  la derecha, que es donde el border-with es de 0px*/
+		/*posicionamiento:*/
+		-webkit-transform: rotateY(-19.5deg)
+						   rotateX(180deg)
+			   			   translateY(-400px)
+			   					  
+}
+#piramide>div:nth-child(3){/*la primera de las caras hijas del 
+	div(piramide)*/
+	border-color: transparent /*transparencia borde arriba*/
+				  transparent/*transparencia borde abajo*/
+				  transparent /*transparencia borde derecha */
+				  rgba(0,255,0, 0.8);/*borde izquierdo: verde con
+				  transparencia, se le da este
+				  valor a la izquierda porq la cara va apuntar a
+				  la derecha, que es donde el border-with es de 0px*/
+
+		 /*posicionamiento:*/
+		-webkit-transform: rotateY(90deg)
+						   rotateZ(60deg)
+						   rotateX(180deg)
+			   			   translateY(-400px);
+}
+#piramide>div:nth-child(4){/*la primera de las caras hijas del 
+	div(piramide)*/
+	border-color: transparent /*transparencia borde arriba*/
+				  transparent/*transparencia borde abajo*/
+				  transparent /*transparencia borde derecha */
+				  rgba(0,0,255, 0.8);/*borde izquierdo: negro con
+				  transparencia la parte de atras, se le da este
+				  valor a la izquierda porq la cara va apuntar a
+				  la derecha, que es donde el border-with es de 0px*/
+	/*posicionamiento:*/
+		-webkit-transform: rotateX(60deg)
+						   rotateY(19.5deg);
+}
+@-webkit-keyframes giro{
+	from{
+		-webkit-transform:  rotateX(0deg)
+				   			rotateY(0deg)
+				   			rotateZ(0deg);
+	}
+	to{
+		-webkit-transform:  rotateX(360deg)
+				   			rotateY(360deg)
+				   			rotateZ(360deg);
+	}
+}
+
+
+

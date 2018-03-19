@@ -1,0 +1,63 @@
+/*<transform>transformación aplica una 
+transformación 2D o 3D a un elemento. Esta propiedad le permite 
+rotar,escalar, mover, sesgar, etc. elementos.*/
+
+/*<transition>: La propiedad de transición es una propiedad 
+abreviada de las cuatro propiedades de transición:
+transition-property, transition-duration, 
+transition-timing-function, and transition-delay.
+Nota: especifique siempre la propiedad de duración de transición; 
+de lo contrario, la duración es 0 y la transición no tendrá efecto
+
+*/
+div{
+    height: 200px;
+    width: 200px;
+    background: orange;
+    border: 2px solid black;
+    margin: 50px;
+    
+    /*transform: rotate(45deg);*/
+    /*transform-origin: 5%, 20%;*/
+    /*transform: skew(20deg, 5deg);*/
+    /*transform: translate();/**/
+    transition-property: all;
+    transition-duration: 6s;
+    transition-timing-function: ease;
+    /*transition-delay: 3s;*/
+    /*transition: all 2s linear;*/
+    
+    /*ease, 
+    ease-in
+    ease-out
+    ease-in-out
+    linear*/
+
+    
+
+}
+.aux:hover{/*pseudoclase: hover*/
+    /*transform: translateY(0px);*/
+    /*transform: scaleX(0.5);*/
+    transform: rotate(90deg) skew(10deg);
+    background: green;
+
+}
+
+
+
+
+/*
+
+transform: tipo(cantidad);
+transform: tipoX(cantidad);
+transform: tipoY(cantidad);
+transform: tipo(cantidadX, cantidadY);
+transform: tipo() tipo() tipo()...;
+
+rotate
+skew
+translate
+scale
+
+*/

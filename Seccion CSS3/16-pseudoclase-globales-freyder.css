@@ -1,0 +1,30 @@
+/*pseudoclases:
+* hover: es comun para todos los elmentos, es el que
+se activa cuando el raton posa por encima, es funcional
+en las pantallas de escritorio, ojo: el hover en los
+telefonos se activa cuando se hace el click
+nota: se puede poner a una imagen, un enlace, titulo,
+a lo que se quiera*/
+
+p:hover{/*la pseudoclase es el "hover"*/
+	color: green;/*con esto cuando el raton pase por encima
+	del parrafo se pondra verde y luego volvera a su estado
+	original de otro color.*/
+	font-size: 20px;/*cambiando el tamaño del parrafo
+	cuando el raton pase por encima*/
+	font-weight: bolder;/*con esto se pondra en negrita*/
+}
+span:active{/*pseudoclase "active": es un estado que
+indica cuando el click se esta ejecuntando, sirve mucho
+para animaciones, cuando se quiere ingrementar algo y
+al soltar se reduzca*/
+	color: green;
+}
+input:focus{/*esta pseudoclase permite cambiar el
+	diseño El selector de enfoque se usa para 
+	seleccionar el elemento que tiene foco, 
+	*/
+	border-radius: 30px;/*cambia el borde del
+	input y lo pone redondo*/
+	background: #D1A3A3;
+}

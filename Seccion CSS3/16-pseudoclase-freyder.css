@@ -1,0 +1,9 @@
+a#link1:link{/*esto es una pseudaclase, donde
+    se le indica a un link de estar pendiente de ser
+    visto*/
+    color:green;
+}
+a#link2:visited{/*esto es una pseudaclase, de los enlaces
+    que se encuentran ya visitados*/
+    color:red;
+}

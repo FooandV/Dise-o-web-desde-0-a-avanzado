@@ -1,0 +1,47 @@
+@font-face{/*creando una fuente*/
+    font-family: "irlandesa";
+    src:url("MeathFLF.ttf");/*cargando la fuente local
+    que se va utilizar*/
+}   src: local('?'),/*si no encuentra el tipo de fuente
+cargado se le indica otra ruta de otra fuente:*/
+     src:url("CyberCaligraphic.ttf");
+p{
+    font-family: "irlandesa", Arial;/*se esta tratando de 
+    cargar la fuente "irlandesa", si no se encuentra carga
+    Arial o la establecida por el navegador*/
+}
+span{/*en este span se presenta la fuente cargada de 
+    Google/fonts*/
+   font-family: 'Reenie Beanie', cursive;/*se carga
+    la fuente externa "Reenie Beanie y como segunda 
+    opción "cursive"*/
+    font-size: 30px;
+}
+/*Los valores para font-weight pueden ser 
+    100, 200, 300, 400, 500, 600, 700, 800, 
+    normal, lighter, bold y bolder.*/
+p.text{
+    font-family: fantasy;
+    font-weight: lighter;
+    font-style: oblique;/*font-style: puede ser
+    normal,italic u oblique*/
+    text-align: justify;/*text-align= alineación de texto o
+    justificado, tiene varias propiedades*/
+    /*text-decoration: line-through;/*text-decoration= varias 
+    propiedades, tachado y otras.*/
+    /*text-transform: capitalize;/*text-transform: puede ser
+    capitalize, uppercase o lowercase*/
+    font-variant: small-caps;/*puede tener el valor small-caps*/
+    text-indent: 14px;/*para identar*/
+    letter-spacing: 5px;/*para especificar el espacio que habra
+    entre las letras*/
+    word-spacing: 2px; /*altera el espacio que hay entre las palabras*/
+}
+p.text:first-letter{/*indica este pseudo elemento que la primera
+    letra del texto sea mas grande*/
+    font-size: 30px;
+}
+p.text:first-line{/*indica este pseudo elemento que todas las
+    letra del texto sean mas grande*/
+    font-size: 30px;
+}

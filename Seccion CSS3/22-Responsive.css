@@ -1,0 +1,51 @@
+
+body{
+    background: orange;
+}
+div{
+    width: 80%;
+    height: 150px;
+    margin: 8%;
+    display: inline-block;
+    background: white;
+}
+/*movilfirst: consiste en diseñar los elementos de tu pagina
+para que este orientados por defecto a dispositivos Moviles
+de pantallas mucho mas pequeñas
+*/
+/*lineas de código de pantallas promedio que estamos teniendo
+hoy en dia:*/
+
+/*movil smartphone:*/
+@media screen and (min-width: 480px){/*@media screen=
+ establece y registra la pantalla y 
+ and (min-width: 480px)= comprueba la anchura*/
+
+    body{
+        background: #34A647;
+    }
+
+}
+
+/*tablet*/
+@media screen and (min-width: 767px){
+    body{
+        background: #34A2A6;
+    }
+    div{
+        width: 40%;
+        margin: 4%;
+    }
+}
+/*pantalla de escritorio
+    o tablet grande en posicion horizontal:*/
+@media screen and (min-width: 950px){
+    body{
+        background: #A76A9E;
+    }
+    div{
+        width: 28%;
+        margin: 2%;
+    }
+    
+}

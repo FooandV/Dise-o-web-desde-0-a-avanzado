@@ -1,0 +1,28 @@
+/*caracteristicas del div que seran por defecto*/
+div.VelozOut{
+	font-family: 'Arial';
+	background: #a8cf45;
+	text-align: center;
+	font-weight: bolder;
+	position: relative;
+	width: 150px;
+	height: 60px;
+	margin:50px 0 0 20px;
+	overflow: hidden;
+
+}
+.VelozOut{
+	-webkit-animation:1s VelozOut 1;
+}
+@-webkit-keyframes VelozOut{
+	15%{
+		opacity: 1;
+	}
+	100%{
+		
+		-webkit-transform:translateX(-200%)
+						  skewX(-80deg);
+		opacity: 0;
+	}
+}
+	

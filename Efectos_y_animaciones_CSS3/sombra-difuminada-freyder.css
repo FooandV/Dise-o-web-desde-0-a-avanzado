@@ -1,0 +1,29 @@
+/*caracteristicas de la caja div*/
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	margin:10px 10px;
+	text-align: center;
+	font-weight: bolder;
+	padding: 15px 30px;
+	width: 80px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.sombra_difuminada{
+	box-shadow: /*sombra de la caja*/
+			  0px/*desplazamiento horizontal de 0px*/
+			  0px/*desplazamiento vertical de 0px*/
+			  1px /*difiminacion de la sombra*/
+			  rgba(0,0,0,1);/*negro*/
+	-webkit-transition-duration:0.4s;
+}
+.sombra_difuminada:hover{
+	box-shadow: /*sombra de la caja*/
+			  0px/*desplazamiento horizontal de 0px*/
+			  0px/*desplazamiento vertical de 0px*/
+			  8px /*difiminacion de pixeles de la sombra*/
+			  rgba(0,0,0,0.6);/*se le da transparencia al negro*/
+	
+
+}

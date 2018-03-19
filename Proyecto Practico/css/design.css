@@ -1,0 +1,638 @@
+/******************Movil******************************/
+body{
+	font-size: 16px;
+	font-family: 'Handlee', cursive;
+	background: #233D58; /*linear-gradient(to bottom, rgba(137,137,186,1) 0%,rgba(121,121,183,1) 100%)*/
+	background-size: cover;
+	position: relative;
+}
+header {
+	width: 100%;
+	height: 40px;
+	/*background: #5D6EAD;*/
+	background: #233D58;
+	position: relative;
+	z-index: 999;
+}
+header h1{
+	display: none;
+}
+header nav .ioMenuMovil{
+	height: 25px;
+	width:120px;
+	cursor: pointer; 
+	line-height: 40px;
+	margin: 0px 0px 5px 10px;
+	padding-top: 5px;
+}
+header nav .ioMenuMovil img{/*la imagen que tiene dentro se adapta
+	al figure, por eso se le pone:100%*/
+	width: 30%;
+	/*height: 100%;*/
+
+}
+/*diseñando la card:*/
+header nav #car_menu{
+	display: none;
+	position: relative;/*se pone asi porque se empezara a posicionar*/
+	width: 230px;
+	/*height: 870px;*/ /*se quita la altura
+	para que se ajuste a los elementos dentro
+	del menu*/
+	background: white;
+	top: -35px;
+	left: 0px;
+	border-right: 3px solid #AFAEAE;
+	z-index: 999;
+	padding-bottom: 50px/*Para que no corte directamente
+	a la altura que termina la tarjeta en la seccion
+	de abajo*/
+}
+header nav #car_menu #logo_menu{
+	height: 400px;
+	width: 80%;
+	margin:30px 0px;
+	margin-left: 10%;
+	margin-bottom: 50px;
+}
+header nav #car_menu #logo_menu img{
+	width: 80%;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+/*definiendo estilo a lista del menu de la card*/
+header nav #car_menu ul{
+	/*background: red;*/
+	margin-top: -20px;
+	margin-left: 10px;
+}
+/*definiendo elementos de la lista de la card:*/
+header nav #car_menu ul li{
+	list-style: none;/*se quita el punto de la lista*/
+	font-size: 1.7em;
+	line-height: 38px;/*para separar elementos entre si verticalmente*/
+}
+/*definiendo estilo a los enlaces de la lista:*/
+header nav #car_menu ul li a{
+	text-decoration: none;
+	color: black;
+}
+
+header #prev_section,
+header #next_section{
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	overflow: hidden;
+	margin: 5px;
+	position: absolute;
+	top: 0px;
+}
+header #prev_section{
+	right: 35px;
+}
+header #next_section{
+	right: 5px;
+}
+header #prev_section img,
+header #next_section img{
+	width: 100%;
+	bottom: 3px;
+	position: relative;
+}
+header #next_section img{
+	transform: rotate(180deg);
+	bottom: 5px;
+}
+#slider{
+	width: 100%;/*anchura del 100% para ocupar todo el ancho
+	de la pagina*/
+	position: relative;
+	height: 600px;
+	/*background: black;*/
+	 
+}
+/*se definen cada una de las secciones: osea los slide: es decir
+que cada vez que se pulse se muestre un slide y los otros no:*/
+#slider section.slide{
+	position: absolute;/* con esto permitimos navegar en cada
+	seccion, como son position absolute van a estar unos encimas de otros,
+	se sabe q cuando se tien un absolute es como si no estuviera en el flujo
+	de colocacion de elementos*/
+	width: 100%;
+	top: -21px;
+	left: 0px;
+}
+#slider #home{
+	height: 950px;
+	background: #233D58;
+	font-family: 'Handlee', cursive;
+	position: relative;/*relative porq este es el padre
+	y todo lo demas lo vamos a posicionar*/
+	text-align: center;
+	padding-bottom: 50px;
+}
+#slider #home .mainanimation{
+	/*background: red;*/
+	width: 80%;
+	margin-left: 10%;
+	min-height: 400px;
+	position: absolute;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: none;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+
+
+#slider #home .mainlogo{
+	background: none;
+	position: relative;/*porq despues el resto de cosas hay q
+	acomodarlas*/
+	/*background: green;*/
+	width: 60vw;/*responsive vertical al dispositivo*/
+	margin-left: 20vw;
+	min-height: 430px;
+	padding-bottom: 50px;
+}
+#slider #home .mainlogo h2{
+	font-size: 1.6em;
+	padding-top: 150px;
+	color: white;
+	font-weight: lighter;
+}
+#slider #home .mainlogo strong{
+	font-size:1.5em; 
+	font-family: 'cursive';
+	display: block;/*para q se alineen los objetos*/
+
+}
+#slider #home .mainlogo figure,
+#slider #home .mainlogo img{
+		height: 350px;
+		margin:0px;
+
+}
+#slider #home .buttonspage{/*style area general de botones*/
+	width: 100%;
+	/*height: 80px;*/
+	text-align: center;
+	/*background: white;*/
+}
+#slider #home .buttonspage > *{/*plicando style
+	a todos los hijos de la clase buttonspage*/
+	display: inline-block;
+	/*background: red;*/
+	width: 40%;
+	margin:5px 2.5%;
+	color: white;
+	/*vertical-align: middle;*/
+	padding: 15px 2.5%;
+}
+#slider #home #contratame{
+	cursor: pointer;
+	background: #F8931F;
+
+}
+#slider #home a{
+	text-decoration: none;
+	background: #29abe2;
+}
+
+#slider #aboutme{
+	height: 400px;
+	background: yellow;
+}
+#slider #skills{
+	height: 300px;
+	background: red;
+}
+#slider #portfolio{
+	height: 200px;
+	background: blue;
+}
+#slider #blog{
+	height: 100px;
+	background: purple;
+}
+
+#contact_form{
+	position: absolute;
+	right: 0px;
+	top: 39px;
+	background: white;
+	/*border:1px solid green;*/
+	width: 260px;
+	/*height: 400px;*/
+
+	border-top: 1px solid black;
+	box-shadow: 0px 0px 3px #9F9E9E;/*sombra sin desplazamiento con difuminacion*/
+	font-family: 'Handlee';
+	height: 100vh;
+	z-index: 999;
+	display: none;
+}
+#contact_form #open_form:before{
+	font-family: 'icomoon';
+	content: "\e903";
+	font-size: 180px;
+	/*height: 100%;*/
+	/*margin: 0px;*/
+	color: white;
+	position: relative;
+	line-height: 100%;
+	vertical-align: middle;
+}
+
+#contact_form #close_form{
+	position: absolute;
+	/*background: red;*/
+	width: 30px;
+	height: 30px;
+	left: 85%;
+	top: 190px;
+}
+#contact_form #close_form:hover{
+	cursor: pointer;
+}
+#contact_form #close_form:before{
+	position: relative;
+	font-family: 'icomoon';
+	content: "\ea0f";
+	top: 6px;
+	left: 7px;
+}
+#contact_form figure{
+	/*position: absolute;*/
+	height: 180px;
+	width: 100%;
+	margin:0px;
+	padding: 0px;
+	text-align: center;
+	background: #29abe2;
+}
+#contact_form p{
+	/*margin: 20px;*/
+	width: 90%;
+	margin-top: 20%;
+	margin-bottom: 20%;
+	margin-left: 5%;
+	font-weight: bold;
+}
+#contact_form input,
+#contact_form textarea{
+	display: block;
+	margin:20px;
+	border:none;/*se le quitan todos
+	los bordes*/
+	border-bottom:2px solid gray; /*se establece el borde
+	de abajo*/
+	width: 90%;
+	margin-left: 5%;
+	padding-bottom: 3px;
+	margin-bottom: 50px;
+	font-weight: bold;
+}
+#contact_form #button{
+	background: #F8931F;
+	color: white;
+	padding:8px 0px;
+	border-radius: 5px;
+}
+
+#contac_button{
+	width: 60px;
+	height: 60px;
+	background: #F8931F;
+	border-radius: 50%;
+	color: white;
+	z-index: 80;
+	right: 10px;
+	position: fixed;
+	top: 80vh;
+}
+#contac_button:hover{
+	cursor: pointer;
+}
+#contac_button:before{
+	font-family: 'icomoon';
+	content: "\e900";
+	font-size: 2.2em;
+	position: relative;
+	color: white;
+	top: 12px;
+	left: 10px;
+}
+
+footer{
+	width: 100%;
+	background: black;
+	color: white;
+	text-align: center;
+	z-index: 90;
+	height: 150px;
+	position: fixed;
+	bottom: -130px;
+	transition-duration: 0.4s;
+}
+
+footer:hover{
+	bottom: 0px;
+}
+footer:after{
+	font-family: 'icomoon2';
+	content: "\e900";
+	position: absolute;
+	top:0px;
+	left: 50%;
+	width: 60px;
+	height: 60px;
+	margin-left: -30px;
+	margin-top: -30px;
+	border-radius: 50%;
+	background: black;
+	color: white;
+	transform: rotate(180deg);
+	font-size: 4em;
+	transition-duration: 0.4s;
+}
+footer:hover:after{
+	transform: rotate(0deg);
+	background: white;
+	color: black;
+
+	
+}
+
+
+
+
+footer .rrss{/*area donde apareceran las redes sociales*/
+	margin-top: 70px;
+	width: 100%;
+	height: 40px;
+	/*background: white;*/
+}
+
+footer .rrss a{/*style para el espacio de area
+ de cada red social*/
+	width: 40px;
+	height: 40px;
+	/*background: green;*/
+	display: inline-block;
+	position: relative;
+}
+footer .rrss a:before{/*style a pseudoelementos
+	de a*/
+	color: white;
+	text-decoration: none;
+	position: absolute;
+	font-size: 2em;
+	top: 5px;
+	left: 5px;
+	font-family: 'icomoon';
+}
+
+footer .rrss a:nth-child(1):before{/*hijo1*/
+	content: "\ea96";
+}
+footer .rrss a:nth-child(2):before{/*hijo2*/
+	content: "\ea90";
+}
+footer .rrss a:nth-child(3):before{/*hijo1*/
+	content: "\ea8b";
+}
+footer .rrss a:nth-child(4):before{/*hijo1*/
+	content: "\ea93";
+}
+
+
+footer p{
+	font-size: 0.7em;
+	font-weight: lighter;
+	font-family: 'cursive';
+}
+
+
+
+
+
+
+
+
+
+/******************tableta******************************/
+@media screen and (min-width: 480px){
+	#slider #home .mainlogo{
+		width:270px; 
+		left: 50%;
+		margin-left: -135px;
+		padding-bottom: 50px;
+
+	}
+	#slider #home .mainlogo h2{
+		font-size: 1.6em;
+		padding-top: 150px;
+	}
+	#slider #home .mainlogo strong{
+	font-size:1.5em; 
+	font-family: 'cursive';
+	display: block;/*para q se alineen los objetos*/
+	}
+	#slider #home .mainlogo figure{
+		width: 80%;
+		margin-left: 10%;
+	}
+	#slider #home .buttonspage > *{
+		width: 200px;
+	}
+
+
+}
+
+@media screen and (min-width: 600px){
+	body{
+		background: orange;
+	}
+
+}
+
+
+
+
+
+
+
+/******************pantalla normal******************************/
+@media screen and (min-width: 767px){
+	body{
+		background: yellow;
+	}
+
+	header{
+		height: 50px;
+	}
+	header h1{
+		display: inline-block;/*por de fecto el h1 tiene
+		un display lineblock, se le pone el inline para que
+		se mantenga en linea con los elementos del menu
+		*/
+		width: 20%;/*se le asigna una anchura porcentual para
+		q vaya aumentando*/
+		/*background: red;*/
+		margin: 0px;/*se le quita el margen*/
+		height: 50px;/*se pone la misma algura del menu*/
+		margin-left: 80px;/*se pone margen izquierda*/
+		line-height:50px; /*permite el centrado vertical de 
+		la misma altura del elemento padre*/
+		min-width: 220px; 
+	}
+	header h1 >*{/*dandole estilo a los hijos de h1, osea los 
+		enlaces*/
+		display: inline-block;/*para que se alinen una al lado del otro*/
+		vertical-align:middle; /*para que se alinen centrados*/
+		text-decoration:none;/*se quita el style a enlace*/
+		color: white;
+		font-size: 0.6em;
+		/*margin-top: -5px;*/
+		/*margin-right: 4px;*/
+		margin: 0px 3px;/*pargen arriba y abajo 0px, pero
+		a los lados deben estar separados por eso 3px
+		/*bottom: -20px;*/
+		margin-bottom: 5px;
+		/*background:blue; */
+	}
+	header h1 figure{
+		height: 50px;/*altura*/
+		width: 50px;/*anchura*/
+		/*top: -3px;*/
+		margin: 0px;
+		/*background: green;*/
+		/*top: 20px;*/
+	}
+	header h1 figure img{
+		width: 50px;
+		height:50px; 
+	}
+
+/*responsive-design del menu*/
+	header nav{
+		display: inline-block;
+		vertical-align:middle;
+		width: 62%;
+		position: relative;
+		margin-bottom: 2px;
+		/*background: red;*/
+	}
+	/*imagenes de navegagacion*/
+	header nav #showMenu,
+	header nav #hideMenu{
+		display: none;
+
+	}
+	header nav #car_menu{
+		display: inline-block;
+		border:none;
+		background: none;
+		position: relative;
+		top: 0px;
+		width: 100%;
+		/*background: green;*/
+		text-align: right;
+		padding-bottom: 0px;
+	}
+	header nav #car_menu figure{
+		display: none;
+	}
+	/*style lista de menu*/
+	header nav #car_menu ul{
+		padding: 0px;
+		margin: 0px;
+		margin-top: -15px;
+	}
+	/*style elementos de lista del menu*/
+	header nav #car_menu ul li{
+		display: inline-block;/*alienacion de elementos de lista*/
+		width: 75px;
+		/*background: blue;*/
+		text-align: center;/*para q se alinee el texto de cada 
+		elemento*/
+		font-size: 1.2em;/*tamaño del texto*/
+		margin:0px -2px;/*0px arriba y abajo se qiota los margenes
+		para que se queden los elementos mas pegados uno al lado
+		del otro:-2px,*/
+	}
+	/*style a los enlaces <a>*/
+	header nav #car_menu ul li a{
+		color: white;
+	}
+
+	/*style a botones de navegacion*/
+	header #prev_section,
+	header #next_section{
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		background: #29abe2;
+		right: 40px;	
+		z-index: 999;
+		border-radius: 50%;
+	}
+	header #prev_section{
+		top: 115px;
+	}
+	header #next_section{
+		top: 190px;
+		/*transform:rotateX(90deg);*/
+	}
+	header #prev_section img{
+		width: 50%;
+		top: 10px;
+		left: 10px;
+	}
+	header #next_section img{
+		width: 50%;
+		left: 14px;
+		top: 9px;
+	}
+
+	#contact_form{
+		top: 50px;
+		width: 400px;
+	}
+	#contac_button{
+	right: 45px;
+
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 950px){
+	body{
+		background: green;
+	}
+
+}

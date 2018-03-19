@@ -1,0 +1,60 @@
+.padre{
+	width: 250px ;
+	height: 250px ;
+	margin: 25px;
+	background: orange;
+}
+.hijo1{
+	width: 50px;
+	height: 50px;
+	background: red;
+	position: static;/*los static nunca tiene en cuenta
+	las coordenadas*/
+}
+/*nota: position en CSS: son las
+caracteristicas que establecen
+en que punto de la pagina 
+comenzara a posicionar o dibujarse
+el elemento HTML. por defecto
+se crean los elementos con la 
+posicion Static*/
+.hijo2{
+	width: 50px;
+	height: 50px;
+	background: red;
+	position: relative;/*puedo relativisar el elemento
+	hijo con respecto al padre y despues decirle en
+	que punto se tiene que pintar con respecto al origen*/
+	top: 30px;/*pisition con respecto arriba*/
+	left: 200px;/*derecha de ese elemento*/
+	/*bottom: para la parte de abajo;
+	right: para la parte derecha;*/
+}
+/**********************/
+/*absolute*/
+.padre2{
+	width: 250px ;
+	height: 250px ;
+	margin: 25px;
+	background: lime;
+	position: relative;
+}
+.hijo21{
+	width: 50px;
+	height: 50px;
+	background: red;
+	position: absolute;/*cuando un elemento tiene
+	absolute, es como si no existiera en cuanto
+	a posicionamiento*/
+	top: 10px;/*acá toman las coordenadas del padre
+	superior que tenga un position que NO sea absolute,
+	entonces para el caso toma el position del padre2*/
+	/*nota el position:fixed: siempre posiciona sus
+	coordenadas con respecto al body, es muy util
+	para poner publicidad que siempre se este viendo*/
+}
+.hijo22{
+	width: 100px;
+	height: 100px;
+	background: green;
+}	

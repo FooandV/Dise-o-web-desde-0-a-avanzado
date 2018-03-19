@@ -1,0 +1,41 @@
+/*caracteristicas del div que seran por defecto*/
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	margin: 15px 0px;
+	position: relative;
+
+	margin-left: 20px;
+	padding: 5px 20px;
+	text-align: center;
+	font-weight: bolder;
+	width: 80px;
+	/*display: inline-block;*/
+	vertical-align: middle;
+}
+.inRotativo{
+	-webkit-animation:1s inRotativo 1;
+}
+@-webkit-keyframes inRotativo{
+	0%{
+		opacity: 0;
+		-webkit-transform: translateX(-100%)
+						   rotate(-260deg);
+		;/*se traslada el 100%
+		del objeto en sentido contrario a la x, osea q desaparece y
+		se pone un rotate negativo para que rote*/
+	}
+}
+.outRotativo{
+	-webkit-animation:1s outRotativo 1;
+}
+@-webkit-keyframes outRotativo{
+	100%{
+		opacity: 0;
+		-webkit-transform: translateX(100%)
+						   rotate(-260deg);
+		;/*se traslada el 100%
+		del objeto en sentido contrario a la x, osea q desaparece y
+		se pone un rotate positivo hacia la derecha para que rote*/
+	}
+}

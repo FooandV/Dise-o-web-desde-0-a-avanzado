@@ -1,0 +1,46 @@
+/*caracteristicas del div que seran por defecto*/
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	text-align: center;
+	font-weight: bolder;
+	position: relative;
+	width: 150px;
+	height: 60px;
+	margin:50px 0 0 20px;
+	overflow: hidden;
+
+}
+.translateZ{
+	-webkit-animation:1s translateZ 1;
+	/*-webkit-backface-visibility:visible;*//*esto presenta la
+	otra cara de la caja y la muestra visible cuando rote*/
+	/*esto le da perspectiva 3D,
+	representa cuan lejos o cerca estamos de la caja, si
+	estamos mas cerca los efectos seran mas pronunciados
+	-webkit-transform: perspective(200px)
+	rotacion 50 grados
+		rotateX(50deg);*/
+}
+@-webkit-keyframes translateZ{
+	40%{
+		-webkit-transform: perspective(300px)
+						   translateZ(120px)
+						   rotateY(170deg);
+	}
+	50%{
+		-webkit-transform: perspective(300px)
+						   translateZ(120px)
+						   rotateY(190deg);
+	}
+	80%{
+		-webkit-transform: perspective(300px)
+						   translateZ(0px)
+						   rotateY(360deg);
+	}
+	100%{
+		-webkit-transform: perspective(300px)
+						   rotateY(360deg);
+						   
+	}
+}

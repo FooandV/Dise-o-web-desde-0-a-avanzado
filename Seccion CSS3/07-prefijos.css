@@ -1,0 +1,20 @@
+/*
+
+-webkit- 	Google Chrome, Safari, Navegador Android
+-moz- 		Firefox
+-o- 		Opera
+-ms- 		Internet Explorer, Edge
+-khtml- 	Konqueror
+
+*/
+
+header {
+	width: 100%;
+	height: 200px;
+
+	background: -webkit-linear-gradient(top, #EAA969 0%, #fff 100%);
+    /*la linea anterior da un tono degradado al header*/
+}
+div {
+    background: -webkit-linear-gradient(top, #D88737 0%, #fff 100%);
+}

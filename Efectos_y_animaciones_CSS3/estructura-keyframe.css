@@ -1,0 +1,66 @@
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	text-align: center;
+	font-weight: bolder;
+	position: relative;
+	width: 120px;
+	height: 50px;
+	margin:30px 0 0 10px;
+}
+p{
+	padding-top: 15px;
+}
+.caja:hover{
+	-webkit-animation:5s cambia_color 1;/*aca se esta invocando 
+	el keyframe cuando	a la caja se le haga el hover:
+	 sintaxis general de invocación: 
+	  animation-duration,animation-name,animation-iteration-count*/
+}
+/*creando el keyframe
+ sintaxis creación:*/
+@-webkit-keyframes cambia_color{/*los keyframes debes crearlos
+	en la linea del tiempo, es decir que va pasar progresivamente
+	a lo largo del tiempo sobre el elemento que se va lanzar, se
+	hace con porcentajes:%*/
+	0%, 70%{/*al 0% y 70% realizara lo mismo, osea ponerse en color
+	 azul*/
+		background: blue;
+	}
+	50%{/*al 50% suceda algo*/
+		background: red;
+		height: 200px; /*se cambia el alto de la caja*/
+		}
+	
+	/*
+	from{/*estado icinial de la animación
+		background: orange;
+	};
+	to{/*estado final de la animacion
+		background: yellow;
+	/*}*/
+}
+
+
+
+
+/*
+keyframe: son animaciones que podemos aplicar a nuestros elementos
+HTML, los podemos aplicar por defecto si se lo atribuimos
+directamente con código CSS al elemento o en pseudoclases como
+puede ser por ejemplo el hover.
+un keyframe es como si fueran funciones a las que se pueden
+invocar /
+/*
+  animation-name:
+	indica el nombre que tendrá el keyframe que se 
+	añadira a continuación.
+  animation-duration:
+  	indica el tiempo total de la animación
+  animation-iteration-count:
+  	indica las veces que se repetirá. para que sea un bucle
+  	pondremos el valor "infinite"
+  animation-delay:
+  	retardo con el que conmenzará a aplicarse la reproducción
+  	de la animación
+*/

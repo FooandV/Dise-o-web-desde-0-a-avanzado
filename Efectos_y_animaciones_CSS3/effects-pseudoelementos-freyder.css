@@ -1,0 +1,15 @@
+div{
+  border: 2px solid black;
+  width: 50%;
+  position: relative;
+  margin-left: 25%;
+}
+div:before{/*pseudoelemento "before" del div, a este es hal 
+que hay q dalre estilos*/
+  content: 'hola';/*el content es obligado para todos los
+  pseudoelementos*/
+  position: absolute;
+  right:0px;
+  bottom: 0px; 
+  background: red;
+}

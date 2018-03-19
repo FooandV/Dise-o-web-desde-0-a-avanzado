@@ -1,0 +1,13 @@
+div.fija{
+	height: 100px;/*estas medidas
+	en pixeles cambian segun cada pantalla*/
+	width: 100px;
+	background: red;
+}
+div.porcentual{
+	height: 100px;/*altura fija*/
+	width: 50%;/*anchura del 50% con
+	respecto al padre osea al body*/
+	background: green;
+	margin: 5%;
+}

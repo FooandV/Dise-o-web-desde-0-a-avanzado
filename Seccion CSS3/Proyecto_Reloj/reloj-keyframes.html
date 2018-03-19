@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="reloj-keyframes.css">
+	<title>creación Rueda</title>
+
+
+</head>
+<body>
+	<div id="content">
+
+		<div id="hours1" class="rueda">
+			<!-- <div class="card c0">0</div>
+			<div class="card c1">1</div>
+			<div class="card c2">2</div>
+			<div class="card c3"></div>
+			<div class="card c4"></div>
+			<div class="card c5"></div>
+			<div class="card c6"></div>
+			<div class="card c7"></div>
+			<div class="card c8"></div>
+			<div class="card c9"></div> -->
+		</div>
+
+		<div id="hours2" class="rueda">
+			<!-- <div class="card c0">0</div>
+			<div class="card c1">1</div>
+			<div class="card c2">2</div>
+			<div class="card c3">3</div>
+			<div class="card c4">4</div>
+			<div class="card c5">5</div>
+			<div class="card c6">6</div>
+			<div class="card c7">7</div>
+			<div class="card c8">8</div>
+			<div class="card c9">9</div> -->
+		</div>
+
+		<div id="minutes1" class="rueda">
+			<!-- esto ya lo hace el js con la funcion -->
+			<!-- <div class="card c0">0</div>
+			<div class="card c1">1</div>
+			<div class="card c2">2</div>
+			<div class="card c3">3</div>
+			<div class="card c4">4</div>
+			<div class="card c5">5</div>
+			<div class="card c6"></div>
+			<div class="card c7"></div>
+			<div class="card c8"></div>
+			<div class="card c9"></div> -->
+		</div>
+
+		<div id="minutes2" class="rueda">
+			<!-- <div class="card c0">0</div>
+			<div class="card c1">1</div>
+			<div class="card c2">2</div>
+			<div class="card c3">3</div>
+			<div class="card c4">4</div>
+			<div class="card c5">5</div>
+			<div class="card c6">6</div>
+			<div class="card c7">7</div>
+			<div class="card c8">8</div>
+			<div class="card c9">9</div> -->
+		</div>
+
+		<div id="seconds1" class="rueda">
+			<!-- <div class="card c0">0</div>
+			<div class="card c1">1</div>
+			<div class="card c2">2</div>
+			<div class="card c3">3</div>
+			<div class="card c4">4</div>
+			<div class="card c5">5</div>
+			<div class="card c6"></div>
+			<div class="card c7"></div>
+			<div class="card c8"></div>
+			<div class="card c9"></div> -->
+		</div>
+
+		<div id="seconds2" class="rueda">
+			<!-- <div class="card c0">0</div>
+			<div class="card c1">1</div>
+			<div class="card c2">2</div>
+			<div class="card c3">3</div>
+			<div class="card c4">4</div>
+			<div class="card c5">5</div>
+			<div class="card c6">6</div>
+			<div class="card c7">7</div>
+			<div class="card c8">8</div>
+			<div class="card c9">9</div> -->
+		</div>
+
+	</div>
+<!-- esta funcion permite obtener la hora,minutos y segundos actuales al momento de visitar la pagina, por lo cual ya no empezara las cards en 0 -->
+<script>
+	function llenar_Rueda(rueda, inicio, limite) {
+		/*rueda: cual rueda tiene q mostrarse
+		  inicio:con cual numero debe de empezar
+		  limite: hasta cual numero tiene que mostrar*/
+		// body...
+		var ruedaReloj= document.getElementById(rueda);/*con esto ya tenemos dominio sobre la rueda*/
+		cadena="";/*variable*/
+		for(i = inicio; i<10; i++){/*este bucle es para iterar y empiece el ciclo desde i=inicio osea el parametro de entrada*/
+			cadena= cadena + "<div class='card c" + i + "'>";/*en esta variable se almacena el codigo div por cada card:<div class="card c0">0</div>, el numero de card "c0"es el iterador (i) que es el que recorrera todos los numeros, y el numero que esta descrito en el div osea 0*/
+			if (i<=limite) cadena=cadena + i;/*añadiendole el # a la cadena*/
+				 cadena=cadena + "</div>";
+			
+		}
+		for(i = 0; i<inicio; i++ ){/*este bucle es para iterar y 	empiece desde el 0 en adelante*/
+			cadena= cadena + "<div class='card c" + i + "'>";
+			if (i<=limite) cadena=cadena + i;/*añadiendole el # a la cadena*/
+				 cadena=cadena + "</div>";
+		}
+		 //alert(cadena);
+		 ruedaReloj.innerHTML=cadena;/*en la ruedaReloj le metemos el codigo que tiene la variable cadena*/
+
+	}
+	// llenar_Rueda("minutes1", 3, 5);
+	/*llenando las ruedas de las 24 horas:*/
+	var time=new Date();	
+	var horas1=time.getHours();
+	while (horas1 % 10 !=0) horas1--;/*cuando no sea 20 o 10 o 0 se le resta 1*/
+	horas1=horas1/10;
+	llenar_Rueda("hours1", horas1, 2);
+	var horas2= time.getHours();
+	horas2= horas2 - (horas1*10);
+	// alert(horas2);
+	llenar_Rueda("hours2", horas2, 9);
+
+	/*llenando las ruedas de los minutos:*/
+	var minutes1=time.getMinutes();
+	while (minutes1 % 10 !=0) minutes1--;/*cuando no sea 20 o 10 o 0 se le resta 1*/
+	minutes1=minutes1/10;
+	llenar_Rueda("minutes1", minutes1, 5);
+	var minutes2= time.getMinutes();
+	minutes2= minutes2 - (minutes1*10);
+	// alert(minutes2);
+	llenar_Rueda("minutes2", minutes2, 9);
+
+	/*llenando las ruedas de los segundos*/
+	var seconds1=time.getMinutes();
+	while (seconds1 % 10 !=0) seconds1--;/*cuando no sea 20 o 10 o 0 se le resta 1*/
+	seconds1=seconds1/10;
+	llenar_Rueda("seconds1", seconds1, 5);
+	var seconds2= time.getMinutes();
+	seconds2= seconds2 - (minutes1*10);
+	// alert(minutes2);
+	llenar_Rueda("seconds2", seconds2, 9);
+</script>
+</body>
+</html>

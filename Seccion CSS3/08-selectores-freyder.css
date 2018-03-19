@@ -1,0 +1,80 @@
+header h2,h3{
+    color: green;
+}
+/*
+p{
+    color: #B75858;
+}
+p#azul{
+
+    color: blue;
+}
+
+.prueba{
+    color: green;
+}
+.grande{
+
+    font-size: 40px;
+}
+
+/*va hace referencia a todos los parrafos
+que tengan como hermano mayor a un parrafo*/
+/*elemento1 + elemento2*/
+p+p{
+    font-weight: bolder;
+
+}
+/*selectores hijos*/
+div>p {/**estp es todo parrafo hijo de 
+    un div*/
+    color: red;
+}
+/*en este caso no importa el orden
+    lo que importa es que haya un parrafo que
+    sea hermano menor que el anterior*/
+p ~ p{
+    color:green;
+}
+/*haciendo referencia a los h2 que tenga en
+    especifico el atributo "tilte"*/
+/*  
+h2[title]{
+   color: red;
+}*/
+/*con esto le estoy diciendo que me 
+    cambie el atributo "title" con el valor exacto*/
+h3[title="main"]{
+    color: #A58A56;
+}
+/*tomando atributo "title" con varios valores
+exactos*/
+h2[title="main cabecera otro"]{
+    color: red;
+}
+/*un valor es suficiente dentro de varios valores
+en un atributo "title":
+la vergulilla ~ indica que toma el valor en especifico
+y puede tener a sus extremos otros valores diferentes*/
+h4[title ~= "otro"]{
+    color: brown;
+}
+/*el atributo lang es para darle valor al lenguaje 
+de la pagina, para este caso (|=) indica que despues
+de "es" se pondra el estilo a el atributo de donde sea
+llamado*/
+h2,h4[lang |= "es"] {
+    color: blue;
+}
+/*colision de estilos:
+
+1.css del navegador
+2.css del usuario
+3. archivos css enlazados en el orden añadidos
+4.las propiedades que se heredan
+5.propiedades propias del elemento
+6.clases asignadas, y en el mismo orden de asignacion
+7.identificador
+8.!important
+
+*/

@@ -1,0 +1,36 @@
+/*caracteristicas del div que seran por defecto*/
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	margin: 15px 0px;
+	position: relative;
+
+	margin-left: 20px;
+	padding: 5px 20px;
+	text-align: center;
+	font-weight: bolder;
+	width: 80px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.descolgado{
+	-webkit-animation: 1s descolgado 1;
+	-webkit-transform-origin: top left;/*se pone este transform
+	para que tome como origen de rotacion*/
+}
+@-webkit-keyframes descolgado{
+	20%,60%{
+		-webkit-transform: rotate(80deg);
+	}
+	40%{
+		-webkit-transform: rotate(60deg);
+	}
+	80%{
+		opacity: 1;
+		-webkit-transform:rotate(60deg);
+	}
+	100%{
+		-webkit-transform: translateY(1200px);
+		opacity: 0;
+	}
+}

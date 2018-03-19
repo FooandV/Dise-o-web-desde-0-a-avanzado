@@ -1,0 +1,21 @@
+body{
+	background: #3B9249;
+}
+/*caracteristicas de la caja div*/
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	margin:10px 10px;
+	text-align: center;
+	font-weight: bolder;
+	padding: 15px 30px;
+	width: 80px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.esquina_redondeada{
+	-webkit-transition-duration: 0.3s;
+}
+.esquina_redondeada:hover{
+	border-radius: 20px;/*radio del borde cuando este el hover*/
+}

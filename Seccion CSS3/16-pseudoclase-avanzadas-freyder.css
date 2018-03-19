@@ -1,0 +1,98 @@
+/*
+ pseudoclases avanzadas
+
+    <!--Pseudoclases avanzadas
+        estas son muy utilizadas cuando no queremos
+        ponerle a cada elemento un id ya que no
+        es necesario, las pseudoclases permiten
+        identificar de acuerdo al elemento y su
+        pocisión el lugar que ocupan y cambiar
+        su diseño en CCSS-->
+
+    :nth-child(N): es el numero que ocupa como hijo; dentro
+    del padre del elemento que estamos apuntando
+
+    :nth-last-child(N): lo mismo del anterior pero
+    empezando desde el final o el ultimo hijo dentro del
+    padre del elemento que estemos apuntando;
+
+    :nth-of-type(N): con esta pseudoclase nos referimos
+    al tipo: parrafos, articles
+
+    :nth-last-of-type(N): se marcaría el numero en cuestion
+    del tipo que estemos indicando comenzando desde el 
+    elemento o hijo final;
+    
+    :first-of-type: se marca el primero de un tipo;
+
+    :last-of-type: se marca el ultimo de ese tipo;
+
+    :only-of-type: se marca solamente ese tipo si es el
+    unico que existe;
+
+    :empty: se marca si el elemento al que estamos
+    haciendo referencia se encuentra vacio;
+
+    :not(S): se marca el elemento del selector que se
+    indique;
+
+    :last-child: ultimo hijo ;
+    :only-child:unico hijo;
+    :root: elmeento raiz ;
+    :enable: elementos que estan activados;
+    :disable: elementos desactivados;
+    :checked: para checbox o radiobuton;
+    even:pares / odd:impares;
+
+*/
+div *{
+    border: 1px solid black;
+    width: 80px;
+    height: 50px;
+    background: white;
+    display: inline-block;
+}
+/*div *:nth-child(even){
+    background: orange;
+}*/
+/*div p:nth-of-type(2){
+    background: orange;
+}*/
+div article:nth-of-type(2){
+    background: orange;
+}
+div a:nth-of-type(1){/*marcando un enlace*/
+    background: lime;
+}
+/*div p:nth-last-of-type(1){/*marcando el primer
+    parrafo desde el ultimo elemento*/
+    /*background: #C2B6E3;
+}*/
+div p:nth-last-of-type(5){/*marcando el quinto
+    parrafo desde el final*/
+    background: ##C6E5CB;
+}
+div p:first-of-type{/*marcando el primero de un tipo
+    para este caso de los parrafos<p>*/
+    background: orange;
+}
+div article:first-of-type{/*marcando el primero de un tipo
+    para este caso de los article<article>*/
+    background: #1A9192;
+}
+div article:last-of-type{/*marcando el ultimo de un tipo
+    para este caso de los article<article class>*/
+    background: #D5B47F;
+}
+div article:last-of-type{/*marcando el ultimo de un tipo
+    para este caso de los article<article class>*/
+    background: #D5B47F;
+}
+div aside:only-of-type{/*marcando cuando solo haya un elemento
+    de un tipo, para el caso solo hay un aside <aside>*/
+    background: #0A9C59;
+}
+div article:not(.clase){/*marcando un elemento que no 
+    sea de tipo class, para el caso es <article class>*/
+    background: #E89031;
+}

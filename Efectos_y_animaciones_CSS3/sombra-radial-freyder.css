@@ -1,0 +1,70 @@
+/*caracteristicas de la caja div*/
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	margin:10px 10px;
+	text-align: center;
+	font-weight: bolder;
+	padding: 15px 30px;
+	width: 80px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.sombra_radial{
+	position: relative;/*se pone relative ya que esta sera
+	la caja padre, luego sera utilizada la posicion con
+	el before y el after*/
+	box-shadow: 
+			  0px/*desplazamiento horizontal de 0px*/
+			  0px/*desplazamiento vertical de 0px*/
+			  1px /*difiminacion de la sombra*/
+			  black;/* color:negro*/
+}
+.sombra_radial:before,
+.sombra_radial:after{
+	content: '';
+	position: absolute;/*position absolute es como si no existiera*/
+	width: 100%;
+	height: 7px;
+	left:0px;
+	opacity: 0;
+	-webkit-transition-duration:0.4s;
+	
+}
+.sombra_radial:before{
+	background: radial-gradient(
+		ellipse at 50% 150%, 
+		rgba(0,0,0,0.6) 0%,
+		rgba(0,0,0,0) 80%);
+		/*background: radial-gradient(
+		ellipse= se indica que es una elipse que va del 50% desde
+		la mitad de la altura hacia arriba hasta el 150%
+		rgba(0,0,0,0.6) 0%, indica que es un negro que es mas
+		duro en el centro hacia afuera
+		rgba(0,0,0,0) 80%), esto indica la parte del borde se
+		pone un negro pero totalmente transparente a partir del
+		80%=*/
+	bottom: 100%;/*partiendo de abajo, osea que toma el 100% hacia
+	el top, por lo cual se pinta del top hacia arriba*/
+}
+.sombra_radial:after{
+	background: radial-gradient(
+		ellipse at 50% -50%, 
+		rgba(0,0,0,0.6) 0%,
+		rgba(0,0,0,0) 80%);
+		/*background: radial-gradient(
+		ellipse= se indica que es una elipse que va del 50% desde
+		la mitad de la altura hacia abajo hasta el -50%
+		rgba(0,0,0,0.6) 0%, indica que es un negro que es mas
+		duro en el centro hacia afuera
+		rgba(0,0,0,0) 80%), esto indica la parte del borde se
+		pone un negro pero totalmente transparente a partir del
+		80%=*/
+	top: 100%;/*partiendo de arriba, osea que toma el 100% hacia
+	el botton(abajo), por lo cual se pinta del botton hacia abajo*/
+}
+.sombra_radial:hover:before,
+.sombra_radial:hover:after
+{
+	opacity: 1;
+}

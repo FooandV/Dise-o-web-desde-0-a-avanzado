@@ -1,0 +1,31 @@
+/*caracteristicas del div que seran por defecto*/
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	margin: 15px 0px;
+	position: relative;
+
+	margin-left: 20px;
+	padding: 5px 20px;
+	text-align: center;
+	font-weight: bolder;
+	width: 80px;
+	display: inline-block;*/
+	vertical-align: middle;
+}
+.Salidas{
+	-webkit-animation:1s Salidas 1;
+}
+@-webkit-keyframes Salidas{
+	25%{
+		-webkit-transform: scale(0.9);
+	}
+	50%{
+		opacity: 1;
+		-webkit-transform: scale(1.1);
+	}
+	100%{
+		opacity: 0;
+		-webkit-transform: scale(0);
+	}
+}

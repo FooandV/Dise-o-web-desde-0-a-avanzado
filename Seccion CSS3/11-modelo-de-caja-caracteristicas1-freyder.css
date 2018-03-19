@@ -1,0 +1,41 @@
+div{
+	width: 50%;/*anchira*/
+	height: 100px;/*altura*/
+	border: 1px solid black;
+}
+div.dimension{
+	min-width: 250px;/*minimo
+	de anchura*/
+	max-width: 400px;/*max
+	de anchura*/
+
+	/*margin: 20px 50px 100px 3px;*/
+	/* particularizar todas los 
+	lados:
+	 20px de separacion arriba
+	 50px de separacion al lado 
+	 derecho
+	 100px de separacion abajo
+	 3px de separacion al lado
+	 izquierdo*/
+/*si se quiere personalizar mas:
+*/
+	margin: 20px;/*con esto le da
+	20 a todos los lados*/
+	margin-bottom: 60px; /*el 
+	margin-botton le da espacio
+	de margen hacia abajo respecto
+	a los otros elementos*/
+	margin-left:15px ;/*margen izqui*/
+	margin-right:20% ;/*marge dere*/
+	margin-top:0.5% ;/*margen arriba*/
+	background: blue;
+
+	padding: 5px;/*borde interno*/
+	padding: 10px 20px;
+	padding: 10px 50px 3% 15%;
+}
+div p{
+	border: 1px solid red;
+	background: white;
+}	

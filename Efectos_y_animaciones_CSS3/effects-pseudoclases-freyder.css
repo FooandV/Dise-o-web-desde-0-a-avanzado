@@ -1,0 +1,25 @@
+div{
+	border: 2px solid black;
+	width: 50%;
+	position: relative;
+	margin-left: 25%;
+}
+/*Una pseudoclase es el estado de un elemento o el uso q
+estamos haciendo de ese elemento, no todos los elementos
+tienen las mismas pseudoclases*/
+div:hover{/*hover: cuando el raton este encima del elemento*/
+	background: orange;
+}
+a:hover{/*cambiando el enlace a color rojo cuando el raton
+	se pose sobre el elemento*/
+	color: red;
+}
+a:focus{/*esta pseudoclase solo es para los enlaces <a>
+	cuando se hace click sobre el enlace cambia de color
+	cuando se hace click sobre otro elemento cambia*/
+	color: green;
+}
+a:active{/*pseudoclase solo para <a>, cuando se hace click
+	cuando se levanta deja de funcionar*/
+	color: blue;
+}

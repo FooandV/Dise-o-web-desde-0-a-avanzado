@@ -1,0 +1,104 @@
+.contenedor{
+	perspective: 1000px;/*se pone esta perspectiva para que no 
+	este muy cerca, si se le pone poco las esquinas salen
+	muy pronunciadas*/
+	perspective-origin: 50% 50%; /*se pone esta perspectiva
+	para que este centrado tanto vertical como horizontalmente*/
+}
+.cubo{
+	transform-style: preserve-3d;/*para q conserve la perspectiva 
+	3D*/
+	transform:rotateY(-30deg);/*para que se nos incline y podamos
+	ver todas las caras que nos interesa*/
+	margin: 200px auto;/*se le da un margin de 200px arriba y abajo y auto
+	para que se nos centre*/
+}
+.cubo, .cubo>div{/*dandole caracteristicas a las caras del cubo*/
+	height: 290px;
+	width: 290px;
+}
+.cara
+{
+	position: absolute;
+	border:5px solid black;/*para que se vea el borde de cada cara*/
+	opacity: 0.6;/*se le pone opacidad a cada una de las caras para poder
+	ver las otras*/
+}
+.cubo .cara:nth-child(1)/*dando caracteristicas a la primera cara hija 
+del cubo*/ 
+{
+	background: red;
+	-webkit-transform: translateZ(150px)/*la posicionamos y me dice si esta
+	mas cerca o mas proximo,150px porque se tienen 290px de anchura, 5px
+	de cada borde_20px
+	 */
+}
+.cubo .cara:nth-child(2)/*dando caracteristicas a la segunda cara hija 
+del cubo*/ 
+{
+	background: green;
+	transform: translateZ(-150px);
+}
+.cubo .cara:nth-child(3)/*dando caracteristicas a la tercera cara hija 
+del cubo*/ 
+{
+	background: blue;
+	transform: translateX(-150px)/*se mueve -150px eje horizontal*/
+			   rotateY(-90deg);/*rota en el eje vertical (Y) -90°*/
+}
+.cubo .cara:nth-child(4)/*dando caracteristicas a la cuarta cara hija 
+del cubo*/ 
+{
+	background: orange;
+	transform: translateX(150px)/*se mueve 150px eje horizontal*/
+			   rotateY(-90deg);/*rota en el eje vertical (Y) -90°*/
+}
+.cubo .cara:nth-child(5)/*dando caracteristicas a la quinta cara hija 
+del cubo*/ 
+{
+	background: yellow;
+	transform: translateY(-150px)/*se mueve -150px eje vertical Y*/
+			   rotateX(-90deg);/*rota en el eje horizontal(X) -90°*/
+}
+.cubo .cara:nth-child(6)/*dando caracteristicas a la sexta cara hija 
+del cubo*/ 
+{
+	background: white;
+	transform: translateY(150px)/*se mueve 150px eje horizontal*/
+			   rotateX(-90deg);/*rota en el eje vertical (X) -90°*/
+}
+.cubo{
+	animation: giro 30s infinite linear;
+}
+@-webkit-keyframes giro{
+	0%{
+		transform: rotateX(-45deg)
+				   rotateY(0deg);
+	}
+	50%{
+		transform: rotateX(45deg)
+				   rotateY(360deg);
+	}
+	100%{
+		transform: rotateX(-45deg)
+				   rotateY(720deg);
+	}
+}
+.cubo.cara:nth-child(1) h1{
+	margin: 0px;/*se le quitan los margenes al h1*/
+	width: 90%;/*anchura del 90%*/
+	margin-left: 5%;/*para que se centre a la inzquierda*/
+	border-bottom: 3px solid #801414;
+}
+.cara.cara:nth-child(1) p{
+	width: 90%;/*anchura del 90%*/
+	margin-left: 5%;/*para que se centre a la inzquierda*/
+	text-align: center;
+	text-decoration: blink;
+}
+.cara.cara:nth-child(3) p{
+	width: 90%;/*anchura del 90%*/
+	margin-left: 5%;/*para que se centre a la inzquierda*/
+	text-align:left;
+	text-decoration: initial;
+}

@@ -1,0 +1,59 @@
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	margin:10px 10px;
+	text-align: center;
+	font-weight: bolder;
+	padding: 15px 30px;
+	width: 80px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.triangulo_lateral{
+	-webkit-transform: translateX(0)/*para que no se
+	desplace a ningun lado*/;
+}.triangulo_lateral:before{/*pseudoelemento*/
+
+	content: '';
+	/*width:30px;anchura*/
+	/*height: 30px;/*altura*/
+	/*background: red;*/
+	position: absolute;/*posicion como si no existiera*/
+	left: 0px;/* se posiciona a 0px del div ya creado*/
+	top: 50%;/*para que se posicione o pinte verticalmente
+	 a partir de arribla del 50% del 100% del div 
+	 hacia abajo , por lo cual se posiciona en la
+	mitad*/
+	margin-top: -15px; /*se le sube la mitad de la caja
+	porque tenemos 30px de altura, de esta forma se
+	dibuja o posiciona en la mitad del div o caja*/ 
+
+	/*para poner esta caja de modo que se convierta en
+	un triangulo hay q jugar con los bordes:
+	se suprime entonces: width y heigth*/
+	border-style: solid;/*se le da un borde solido*/
+	
+	/*se le pone anchura a todos los bordes
+	menos a donde quiere que se apunte el pico del 
+	triangulo:*/
+	border-width: 15px/*borde arriba*/
+				  15px/*borde derecha*/
+				  15px/*borde abajo*/
+				  0px;/*borde izquierda*/
+
+	/*luego se le da color a cada uno de los bordes que se 
+	han creado menos al opuesto*/
+	border-top-color: transparent;/*color transparente borde arriba*/
+	border-right-color: #a8cf45;/*color  borde derecha=opuesto*/
+	border-bottom-color: transparent;/*color transparente borde abajo*/
+	border-left-color: transparent;/*color transparente borde izquierda*/
+	
+	-webkit-transition-duration:0.3s;/*esto permite que 
+	el proceso de movimiento cambie lentamente */
+}
+/*ya con el triangulo creado lo siguiente es darle
+el evento de desplazmiento al pseudoelemento:*/
+.triangulo_lateral:hover:before{/*se pone la pseudoclase
+	hover para darle movimiento a la parte del before*/
+	left: -14px;/*desplazamiento -14px hacia la izquierda*/
+}

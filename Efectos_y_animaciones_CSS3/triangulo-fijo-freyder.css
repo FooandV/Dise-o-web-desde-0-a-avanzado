@@ -1,0 +1,63 @@
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	margin:10px 10px;
+	text-align: center;
+	font-weight: bolder;
+	padding: 15px 30px;
+	width: 80px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.triangulo_fijo{
+	-webkit-transform: translateX(0)/*para que no se
+	desplace a ningun lado*/;
+	-webkit-transition-duration:0.3s;
+}.triangulo_fijo:before{/*pseudoelemento*/
+
+	content: '';
+	/*width:30px;anchura*/
+	/*height: 30px;/*altura*/
+	/*background: red;*/
+	position: absolute;/*posicion como si no existiera*/
+	top: 0px;/* se posiciona arriba a 0px del div ya creado*/
+	left: 50%;/*para que se posicione o pinte horizontalmente
+	 a partir de, lado derecho del 50% del 100% del div, 
+	 por lo cual se posiciona en la	mitad*/
+	margin-left: -15px; /*para que este centrado en la caja*/ 
+
+	/*para poner esta caja de modo que se convierta en
+	un triangulo hay q jugar con los bordes:
+	se suprime entonces: width y heigth*/
+	border-style: solid;/*se le da un borde solido*/
+	
+	/*se le pone anchura a todos los bordes
+	menos a donde quiere que se apunte el pico del 
+	triangulo:*/
+	border-width: 0px/*borde arriba*/
+				  15px/*borde derecha*/
+				  15px/*borde abajo*/
+				  15px;/*borde izquierda*/
+
+	/*luego se le da color a cada uno de los bordes que se 
+	han creado menos al opuesto*/
+	border-top-color: transparent;/*color transparente borde arriba*/
+	border-right-color: transparent;/*color  borde derecha=opuesto*/
+	border-bottom-color: #a8cf45;/*color transparente borde abajo*/
+	border-left-color: transparent;/*color transparente borde izquierda*/
+	
+	-webkit-transition-duration:0.3s;/*esto permite que 
+	/*el proceso de movimiento cambie lentamente */
+}
+
+/*ya con el triangulo creado lo siguiente es darle
+el evento de desplazmiento al pseudoelemento:*/
+.triangulo_fijo:hover:before{/*se pone la pseudoclase
+	hover para darle movimiento a la parte del before*/
+	top: -14px;/*desplazamiento -14px hacia arriba*/
+}
+/*con esto hover se hara mover es la caja mas no el triangulo*/
+.triangulo_fijo:hover{
+	-webkit-transform: translateY(15px);/*con el translate en el 
+	eje (Y), se traslada verticalmente 15px*/
+}

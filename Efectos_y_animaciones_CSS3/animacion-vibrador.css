@@ -1,0 +1,32 @@
+/*caracteristicas del div que seran por defecto*/
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	margin: 15px 0px;
+	position: relative;
+
+	margin-left: 20px;
+	padding: 5px 20px;
+	text-align: center;
+	font-weight: bolder;
+	width: 80px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.vibrador:hover{
+	-webkit-animation:1s vibracion infinite;
+}
+@-webkit-keyframes vibracion{
+	10%, 30%, 50%, 70%, 90%{
+		-webkit-transform:translateX(-10px);
+	}
+	20%, 40%, 60%, 80%{
+		-webkit-transform:translateX(10px);
+	}
+	5%, 25%, 45%, 65%, 85%{
+		-webkit-transform:translateY(-10px);
+	}
+	15%, 35%, 55%, 75%,95%{
+		-webkit-transform:translateY(10px);
+	}
+}

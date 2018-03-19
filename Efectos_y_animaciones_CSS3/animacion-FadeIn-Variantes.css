@@ -1,0 +1,46 @@
+/*caracteristicas del div que seran por defecto*/
+div.FadeIn2{
+	font-family: 'Arial';
+	background: #a8cf45;
+	text-align: center;
+	font-weight: bolder;
+	position: relative;
+	width: 150px;
+	height: 60px;
+	margin:50px 0 0 20px;
+	overflow: hidden;
+
+	/*margin-left: 20px;*/
+	/*padding: 0px;
+	
+    display: inline-block;
+	vertical-align: middle;*/
+}
+.FadeIn2{
+	-webkit-animation:2s FadeIn2 1;
+}
+@-webkit-keyframes FadeIn2{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0.7;
+	}
+}
+.tapa{
+	width: 100%;/*se le dan estos tamaños para que ocupen lo mismo de la caja padre*/
+	height: 100%;/*se le dan estos tamaños para que ocupen lo mismo de la caja padre*/
+	top: 0;
+	left: 150px;
+	position: absolute;
+	background: white;
+	/*padding: 0;*/
+	z-index: 10;
+	-webkit-animation: 2s retirada 1;
+}
+@-webkit-keyframes retirada{
+	0%{
+		left: 0px;
+		/*-webkit-transform:translateX(-500px);*/
+	}
+}

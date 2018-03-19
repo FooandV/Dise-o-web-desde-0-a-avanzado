@@ -1,0 +1,58 @@
+body{
+	background: #9CC3B8;
+	font-family: 'Arial';
+}
+nav{/*Menu*/
+	background: white;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	/*text-align: right;*/
+}
+nav ul{
+	padding: 0px;/*borde interno*/
+	margin: 0px;/*se le quitan los margenes al menu*/
+	list-style: none;/*quitando el estilo de lista*/
+	text-align: left;
+}
+li{/*elementos de la lista*/
+	display: inline-block;/*para que los elementos de la lista se pongan en linea*/
+	margin: 7px -2px;/*se separan los elementos de la lista
+	arriba y abajo y 0 a los lados*/
+}
+a{/*dando estyle a los enlaces*/
+	text-decoration: none;/*se quita el resaltado del enlace*/
+	color: black;/*color de los enlaces*/
+	font-weight: bolder;/*negrita de la fuente de los enlaces*/
+	/*border:1px solid red;para saber que área esta ocupando cada*/
+	/*elemento*/
+	padding: 5px 10px;/*arriba y abajo 5px y 10px a los lados*/
+}
+
+/*apra no utilizar y dar nombramientos de varias clases a elementos
+en el html se utiliza pseudoclases*/
+li:nth-of-type(1) /*con esta pseudoclase se hace referencia al
+primer <li> que sea este tipo osea al primero*/
+ a:focus{/*pseudoclase:focus para cuando se haga click en el elemento*/
+ 	/*color: red;*//*cambia el color del primer elemento del menu*/
+ 	border-bottom:  3px solid #0C4F2A;/*se le da color al border
+ 	en la seccion de abajo*/
+ 	
+ }
+ li:nth-of-type(2) /*con esta pseudoclase se hace referencia al
+primer <li> que sea este tipo osea al primero*/
+ a:focus{/*pseudoclase:focus para cuando se haga click en el elemento*/
+ 	/*color: red;*//*cambia el color del primer elemento del menu*/
+ 	border-bottom:  3px solid #0C4F2A;/*se le da color al border
+ 	en la seccion de abajo*/
+ 	
+ }
+ li:nth-of-type(3) /*con esta pseudoclase se hace referencia al
+primer <li> que sea este tipo osea al primero*/
+ a:focus{/*pseudoclase:focus para cuando se haga click en el elemento*/
+ 	/*color: red;*//*cambia el color del primer elemento del menu*/
+ 	border-bottom:  3px solid #0C4F2A;/*se le da color al border
+ 	en la seccion de abajo*/
+ 	
+ }

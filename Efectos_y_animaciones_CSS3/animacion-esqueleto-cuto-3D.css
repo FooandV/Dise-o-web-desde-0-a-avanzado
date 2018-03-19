@@ -1,0 +1,56 @@
+body{
+	background: #2EB2FF;
+}
+.box{
+	display: inline-block;
+	margin: 50px 50px;
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+
+.box>div{
+	border:2px solid black;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.front{
+	opacity: 0.75;
+	box-shadow: inset 0px 2px 20px black;/*sombra interna*/
+}
+.back{
+	background: white;
+	-webkit-transform:  translateZ(-100px) 
+						rotateY(90deg);
+						left: 100px;
+}
+.box{
+	transition-duration: 0.5s;
+	transform-style: preserve-3d;
+	transform-origin: left center;
+}
+.box:hover{
+	-webkit-transform: perspective(900px)
+					  rotateY(-80deg);
+}
+.box:hover.front{
+	opacity: 1;
+}
+.box:nth-child(1) .front{/*la primera caja en su div front*/
+	background: url("elipse.gif");
+}
+.box:nth-child(2) .front{/*la segunda caja en su div front*/
+	background: url("Violettayperro.jpg");
+}
+.back h1{
+	margin: 0px;/*se le quitan los margenes al h1*/
+	width: 90%;/*anchura del 90%*/
+	margin-left: 5%;/*para que se centre a la inzquierda*/
+	border-bottom: 3px solid #801414;
+}
+.back p{
+	width: 90%;/*anchura del 90%*/
+	margin-left: 5%;/*para que se centre a la inzquierda*/
+}
+

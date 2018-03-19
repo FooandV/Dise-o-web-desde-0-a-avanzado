@@ -1,0 +1,18 @@
+div{
+	width: 100px;/*anchura*/
+	height: 100px;/*altura*/
+	border: 1px solid black;/*esto es 1px del borde
+	izquierdo y 1px del borde derecho*/
+	margin:20px;/*20px de margin derecho y 20 izquierdo*/
+    /*padding: 20px;*/	
+    padding: 10px; /*pixeles del borde interno, los 
+    padding no se utilizan para separar las cosas entre 
+    si, los padding sirven para darle al elemento
+    mas grosor*/
+}
+a{
+	width: 200px;
+	height: 100px;
+	border: 1px solid red;
+	padding: 30px;
+}

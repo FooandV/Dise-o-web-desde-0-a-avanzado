@@ -1,0 +1,30 @@
+.padre{
+    width: 250px;
+    height: 2500px;
+    margin: 25px;
+    background: orange;
+}
+
+.hijo2{
+    width: 100px;
+    height: 100px;
+    background: green;
+    /*display: inline-block;*/
+    float: right;/*flota derecha, cuando se utiliza
+    el float por lo general va acompañado
+    del display: inline-block para que los elementos
+    se enlisten una al otro*/
+}
+.hijo1{
+    width: 50px;
+    height: 50px;
+    background: red;
+    display: inline-block;/*este elemento se posiciona
+    en linea*/
+}
+.hijo3{
+    width: 50px;
+    height: 50px;
+    background: blue;
+    clear: both;/*limpio en ambos sentidos el float*/ 
+}

@@ -1,0 +1,57 @@
+/*caracteristicas de la caja div*/
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	margin:10px 10px;
+	text-align: center;
+	font-weight: bolder;
+	padding: 15px 30px;
+	width: 80px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.sombra_movil{
+	-webkit-transform: translateX(0);
+}
+/*creando las caracteristicas del pseudoelemento*/
+.sombra_movil:before{
+	content: '';
+	position: absolute;
+	width: 90%;/*anchura: se posiciona al 90% del padre(div)*/
+	left: 5%;/*respartiendose un 5% a la izquierda*/
+	top: 100%;/*ocupa toda la altura, entonces se pinta abajo*/
+	height:10px; /*altura que va tener el pseudoelemento*/
+	/*background: red;*/
+	/*luego se le da la sombra eliptica:*/
+	background: -webkit-radial-gradient(
+		center, ellipse, 
+		rgba(0,0,0,0.35) 0%,
+		rgba(0,0,0,0) 80%);/**/
+
+	-webkit-transition-duration:0.5s;/*dandole movimiento al before*/
+	opacity:0; 	
+}
+.sombra_movil:hover{/*en la caja cuando se haga un hover que
+	aplica al elemento y al pseudoelemento*/
+	-webkit-transform: translateY(-5px);/*se realiza una translacion
+	en el eje Y en - 5px*/
+	-webkit-animation:1.5s movercaja infinite;
+}
+@-webkit-keyframes movercaja{
+	50%{
+		-webkit-transform:translateY(-10px);
+	}
+}
+.sombra_movil:hover:before{/*dandole caracteristicas al before*/
+	-webkit-transform: translateY(5px);/*cuando actue el hover
+	el before se va hacia abajo*/
+	opacity: 1;
+	-webkit-animation:1.5s moversombra infinite;
+}
+@-webkit-keyframes moversombra{
+	50%{
+		opacity: 1;
+		-webkit-transform:translateY(10px);
+	}
+}
+

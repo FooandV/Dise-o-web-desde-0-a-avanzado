@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Original</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="08-selectores-freyder.css">
+	<script src="modernizr-custom.js"></script>
+</head>
+<body>
+	<header>
+		<div>
+			<h2 title="main">Titulo secundario en cabecera</h2>
+		</div>
+	</header>
+	<!-- este atributo "title"tiene varios valores: -->
+	<h2 title="main cabecera otro">Titulo Secundario2</h2>
+	<h2 lang="es-MX">Titulo Secundario3 validando lenguaje de Mexico</h2><!-- el atributo lang se utiliza para dar el lenguaje la html -->
+
+	<h3 title="main">titulo terciario</h3>
+	<!-- este atributo "title"tiene varios valores: -->
+	<h4 title="main cabecera otro">validando titulo con varios valores</h4>
+	<h4 title="otro">validando titulo con varios valores</h4>
+	<h4 lang="es-ES">validando lenguaje España</h4>
+
+
+	<p>texto prueba</p>
+	<p>texto prueba</p>
+	<p id="azul">texto prueba</p>
+	<p>texto prueba</p>
+	<p>texto prueba</p>
+
+	<p class="prueba grande">texto con clase</p>
+	<p class="prueba">texto con clase</p>
+	<p class="prueba grande">texto con clase</p>
+	<p class="prueba">texto con clase</p>
+	<div></div>
+	<p class="prueba">texto con clase</p><!-- este parrafo ya no tiene hermanos
+	por lo cual no se le aplica el p+p -->
+	
+	<!-- trabajando con selectores hijos -->
+	<div>
+		<p class="prueba grande">texto de hijos de div</p>
+		<p class="prueba hijos">texto de hijos de div</p>
+		<p class="prueba hijos">texto de hijos de div</p>
+		<p class="prueba hijos">texto de hijos de div</p>
+	</div>
+
+	<div>
+
+		<article>
+			<p class="prueba grande">texto con clase</p>
+			<p class="prueba grande">texto con clase</p>
+			<p class="prueba grande">texto con clase</p>
+		</article>
+	</div>
+	<p>hola</p>
+</body>
+</html>

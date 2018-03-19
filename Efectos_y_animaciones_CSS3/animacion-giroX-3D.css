@@ -1,0 +1,41 @@
+/*caracteristicas del div que seran por defecto*/
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	text-align: center;
+	font-weight: bolder;
+	position: relative;
+	width: 150px;
+	height: 60px;
+	margin:50px 0 0 20px;
+	overflow: hidden;
+
+}
+.giroX{
+	-webkit-animation:1.5s giroX 1;
+	-webkit-backface-visibility:visible;/*esto presenta la
+	otra cara de la caja y la muestra visible cuando rote*/
+	/*esto le da perspectiva 3D,
+	representa cuan lejos o cerca estamos de la caja, si
+	estamos mas cerca los efectos seran mas pronunciados
+	-webkit-transform: perspective(200px)
+	rotacion 50 grados
+		rotateX(50deg);*/
+}
+@-webkit-keyframes giroX{
+	0%{
+		opacity: 0.5;
+		-webkit-transform:perspective(200px)
+						  rotateX(90deg);
+	}
+	40%{
+		/*opacity: 0.5;*/
+		-webkit-transform:perspective(200px)
+						  rotateX(-20deg);
+	}
+	70%{
+		/*opacity: 0.5;*/
+		-webkit-transform:perspective(200px)
+						  rotateX(20deg);
+	}
+}

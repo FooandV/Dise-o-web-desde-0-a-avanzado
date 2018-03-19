@@ -1,0 +1,52 @@
+/*caracteristicas de la caja div*/
+div{
+	font-family: 'Arial';
+	background: #a8cf45;
+	margin:10px 10px;
+	text-align: center;
+	font-weight: bolder;
+	padding: 15px 30px;
+	width: 80px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.esquina_pagina{
+	-webkit-transform: translateX(0);/*esto es para que
+	no realizar translacion en el eje horizontal de X(0)*/
+
+}
+.esquina_pagina:before{ /*pseudoelemento before del div*/
+	content: '';
+	width: 35px;
+	height: 35px;
+	background: red;
+	position: absolute;
+	left: 0px;/*se dibuja en la parte izquierda en 0px de la caja*/
+	bottom: 0px;/*se dibuja ´partiendo de abajo de la caja*/
+
+/*despues de que la caja roja este creada, esta hay que
+realizar una transformación de movimiento para que se ponga una
+esquina doblada:
+para ello se le hace una transicion de degradado:*/
+/*45deg: inclinacion de degradado a la caja;	*/
+/*faces de color:white 45%, luego toma el color gris: #aaa 50%,
+luego pasa a #ccc 60%* que es mas claro y luego se finaliza
+con blanco=white*/
+
+	background: -webkit-linear-gradient( 
+		45deg, white 45%, #aaa 50%, 
+		#ccc 60% , white 
+		);
+	/*luego se reduce la caja a 0, ocupando 0px pero sigue estando*/
+	width: 0px;
+	height: 0px;
+
+	-webkit-transition-duration:0.3s;
+}
+/*para que se visualice:*/
+.esquina_pagina:hover:before{/*se cambia la caracteristica del
+	before con el pseudoelemento hover*/
+	width: 35px;/*anchura*/
+	height: 35px;/*altura*/
+	
+}

@@ -1,0 +1,53 @@
+.padre{
+    width: 250px;
+    height: 250px;
+    margin: 25px;
+    background: orange;
+    overflow: hidden;/*esta propiedad indica que 
+    todo lo que se salga del padre no se vea*/
+    
+}
+/*
+.padre > div {
+    display: inline-block;
+}
+*/
+.hijo2{
+    width: 100px;
+    height: 100px;
+    background: green;
+    position: absolute;/*absolute toma la posicion
+    del padre*/
+}
+.hijo1{
+    width: 50px;
+    height: 50px;
+    background: red;
+    display: inline-block;
+    z-index: 99;/*este solo funciona con position y 
+    se utiliza mucho cuando se necesite que queden
+    elementos unos por encima de otros*/
+    position: relative;
+}
+.hijo3{
+    width: 50px;
+    height: 50px;
+    background: yellow;
+    display: inline-block;
+    z-index: 99;/*este solo funciona con position y 
+    se utiliza mucho cuando se necesite que queden
+    elementos unos por encima de otros*/
+    position: relative;
+    top: -25px;/*como el padre tiene una propiedad
+    de overflow-hidden entonces, este top bajo ese
+    valor NO se mostrara fuera del padre*/
+}
+.oculto{
+    visibility: hidden;/*no mostrar el elemento pero
+    sigue teniendo su precensia en cuanto a jerarquia
+    de alineamiento del elemento*/
+}
+.transparencia{
+    opacity: 0.3;/*propiedad para darle transparencia 
+    un elemento*/
+}
